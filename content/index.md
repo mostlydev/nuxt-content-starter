@@ -2,7 +2,7 @@
 title: Company Inc
 description: Company Inc builds efficient products and tools for businesses. Our solutions handle integration needs for enterprises.
 keywords: business software, integration, enterprise software, business tools
-ogImage: /images/flux-inc-logo-color.jpg
+ogImage: /images/company-placeholder-logo.svg
 ---
 
 ::FullWidthSection{variant="gradient" gradientColor="primary-500" padding="md" patternOverlay="true"}

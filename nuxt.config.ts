@@ -28,6 +28,64 @@ export default defineNuxtConfig({
       fonts: {
         main: process.env.NUXT_FONT_MAIN || 'Lato',
         code: process.env.NUXT_FONT_CODE || 'Fira Code'
+      },
+      navigation: {
+        logo: {
+          src: '/images/flux-inc-logo-color.png',
+          width: 150,
+          height: 48,
+          alt: 'Company Inc logo'
+        },
+        items: [
+          {
+            id: 'home',
+            label: 'Home',
+            to: '/'
+          },
+          {
+            id: 'products',
+            label: 'Products',
+            to: '/products',
+            children: [
+              {
+                label: 'Product Sample',
+                to: '/products/product-sample',
+                matchPattern: '/products/product-sample'
+              }
+            ]
+          },
+          {
+            id: 'info',
+            label: 'Resources',
+            to: '#',
+            children: [
+              {
+                label: 'Blog',
+                to: '/blog',
+                matchPattern: '/posts'
+              },
+              {
+                label: 'UI Components',
+                to: '/components'
+              },
+              {
+                label: 'Case Study',
+                to: '/case-studies',
+                matchPattern: '/case-studies'
+              }
+            ]
+          },
+          {
+            id: 'about',
+            label: 'About',
+            to: '/about'
+          },
+          {
+            id: 'contact',
+            label: 'Contact',
+            to: '/contact'
+          }
+        ]
       }
     }
   },
@@ -86,8 +144,7 @@ export default defineNuxtConfig({
     cssPath: [`~/assets/css/tailwind.css`, { injectPosition: "first" }],
     config: {},
     viewer: true,
-    exposeConfig: true,
-    injectPosition: "first"
+    exposeConfig: true
   },
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
@@ -107,10 +164,6 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'apple-touch-icon', href: '/favicon.png' }
       ],
-      style: [{
-        children: 'body{background-color:#18181b;color:#d4d4d8;opacity:1!important;}',
-        type: 'text/css'
-      }],
       script: [
         /*      TODO: Reenable when we can set the color scheme to dark
                 {

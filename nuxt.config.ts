@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       },
       navigation: {
         logo: {
-          src: '/images/flux-inc-logo-color.png',
+          src: '/images/company-placeholder-logo.svg',
           width: 150,
           height: 48,
           alt: 'Company Inc logo'

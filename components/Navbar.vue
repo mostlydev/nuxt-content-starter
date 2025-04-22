@@ -69,7 +69,7 @@
 <script setup>
 // Base data with fallbacks to ensure we never have undefined values
 const fallbackLogo = {
-  src: '/images/flux-inc-logo-color.png',
+  src: '/images/company-placeholder-logo.svg',
   width: 150,
   height: 48,
   alt: 'Company logo'

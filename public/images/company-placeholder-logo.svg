@@ -6,15 +6,6 @@
   <!-- Stylized "C" shape representing a company placeholder logo -->
   <path d="M220 100 Q270 60 320 100 L320 256 Q270 296 220 256 L220 100Z" fill="#4ad1c9" stroke="#4ad1c9" stroke-width="5"/>
 
-  <!-- Horizontal text line -->
-  <rect x="370" y="150" width="600" height="30" rx="15" fill="#4ad1c9"/>
-
-  <!-- Text dot -->
-  <circle cx="1020" cy="150" r="15" fill="#4ad1c9"/>
-
-  <!-- Text dot -->
-  <circle cx="1020" cy="200" r="15" fill="#4ad1c9"/>
-
-  <!-- Company name implied with text underline -->
-  <rect x="370" y="200" width="600" height="30" rx="15" fill="#4ad1c9" fill-opacity="0.6"/>
+  <!-- Company Name Text -->
+  <text x="370" y="210" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#4ad1c9">Company</text>
 </svg>

@@ -4,10 +4,7 @@ description: Explore example implementations of our technologies
 keywords: case studies, enterprise solutions
 ---
 
-
-# Case Studies
-
-We deliver powerful solutions across a range of industries. Our case studies showcase our expertise in both medical imaging and enterprise applications.
+We deliver powerful solutions across a range of industries. Our case studies showcase our expertise in enterprise applications.
 
 We approach each project with:
 

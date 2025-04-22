@@ -17,9 +17,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) fi
 ## Project Structure
 
 1. Content is stored as Markdown files in the `/content` directory:
-   - Main pages are directly in `/content` (about.md, contact.md, medical.md)
+   - Main pages are directly in `/content` (about.md, contact.md)
    - Blog posts are in `/content/blog/`
-   - Medical content is in `/content/medical/`
 
 2. Key routing files:
    - `pages/index.vue` renders the homepage content from `/content/index.md`

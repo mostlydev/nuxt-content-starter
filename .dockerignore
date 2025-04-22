@@ -1,0 +1,12 @@
+.nuxt
+node_modules
+.output
+dist
+.cache
+.git
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea
+*.log

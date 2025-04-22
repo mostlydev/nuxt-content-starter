@@ -1,0 +1,8 @@
+[
+  {
+    "source": "/some-old-link/",
+    "target": "https://nuxt-content-starter.fluxinc.co/new-page",
+    "code": 301,
+    "active": true
+  }
+]

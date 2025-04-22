@@ -1,0 +1,38 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+# Project tech stack
+
+- Nuxt 3 with nuxt/content v3.3
+- @nuxtjs/tailwindcss for styling
+- @nuxt/image for optimization
+- @nuxtjs/color-mode for theme support
+- highlight.js, remark-mermaidjs for code and diagrams
+- pnpm package manager for all package management
+
+# Key files & directories
+
+- `/content/` - Markdown files for all site content:
+  - Main pages in root `/content/` (index.md, about.md)
+  - Blog posts in `/content/posts/`
+- `/public/images/` - Static images with subdirectories by content type
+- `/components/content/` - MDC components (ContentBox, FullWidthSection, etc.)
+- `/pages/[...slug].vue` - Dynamic routing for all content
+- `/layouts/default.vue` - Main layout with navigation and footer
+- `/assets/css/tailwind.css` - Custom CSS and Tailwind extensions
+- `/nuxt.config.ts` - Module configuration (Content, Image, etc.)
+
+# Content architecture
+
+- "Content-first" approach with all content in Markdown/MDC files
+- Automatic routing maps content paths to URLs:
+  - `/content/about.md` → `/about`
+  - `/content/posts/article.md` → `/posts/article`
+- Content files use frontmatter for metadata
+- SEO handled via useSeoMeta composable
+- Custom components for rich content presentation via MDC syntax
+- ALWAYS reference images with absolute paths from `/public`: `/images/posts/example.jpg`
+

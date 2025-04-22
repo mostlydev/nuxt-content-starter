@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Development principles
+
+- Prefer simple, focused solutions
+- ALWAYS check for existing components before creating new ones
+- ALWAYS use block component syntax in content files (*.md, *.mdc)
+- Avoid code duplication; reuse existing patterns
+- Make minimal changes needed to solve the problem
+- Respect code organization and architectural patterns
+- Keep code clean, readable, and well-organized
+- Use Vue 3 Composition API for components
+- Follow existing naming conventions
+- Content changes should follow writing guidelines (see my-rules-for-content.mdc)
+
+# Media and assets
+
+- ALWAYS store images in correct location: `/public/images/`
+- Organize content assets in subdirectories by content type (posts, products)
+- Follow existing patterns for file naming
+- NEVER reference assets from incorrect locations
+
+# Workflow guidance
+
+- Focus only on relevant code areas
+- Test changes thoroughly 
+- Consider side effects and impacts on other components
+- Preserve existing functionality unless specifically changing it
+- NEVER modify .env files without explicit confirmation

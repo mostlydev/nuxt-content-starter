@@ -1,0 +1,167 @@
+/* Main styles for Nuxt Content Starter */
+
+/* Import fonts from Google dynamically using env variables */
+@import url('https://fonts.googleapis.com/css2?family=var(--main-font):wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=var(--code-font):wght@300;400;500;600;700&display=swap');
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that extend Tailwind */
+@layer base {
+  :root {
+    --main-font: Lato;
+    --code-font: 'Fira Code';
+  }
+
+  html, body {
+    @apply overflow-x-hidden;
+    width: 100%;
+  }
+
+  body {
+    @apply bg-zinc-900 text-zinc-300 font-thin;
+    /* Add any styles you want for the body here, but don't hide it */
+  }
+
+  /* Default heading styles - all white */
+  h1, h1.prose-h1 {
+    @apply text-3xl font-bold mt-16 mb-6 text-primary-50;
+  }
+
+  h2, h2.prose-h2 {
+    @apply text-2xl font-semibold mt-24 mb-6 text-primary-100;
+  }
+
+  h3, h3.prose-h3 {
+    @apply text-xl font-medium my-6 text-primary-200;
+  }
+
+  h4, h4.prose-h4 {
+    @apply text-lg font-medium my-5 text-primary-300;
+  }
+
+  h5, h5.prose-h5 {
+    @apply text-base font-medium my-4 text-primary-300;
+  }
+
+  h6, h6.prose-h6 {
+    @apply text-sm font-medium my-3 text-primary-300;
+  }
+
+  /* Links in content - primary color, no underline by default */
+  a {
+    @apply text-primary-400 no-underline;
+  }
+
+  a:hover {
+    @apply text-primary-300 no-underline;
+  }
+
+  /* Links in headings - should be white like the headings */
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    @apply text-primary-300 no-underline;
+  }
+
+  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    @apply text-primary-100 no-underline;
+  }
+
+  /* Special styling for content in bullets */
+  li a {
+    @apply text-primary font-medium no-underline;
+  }
+
+  li a:hover {
+    @apply text-primary-400 no-underline;
+  }
+
+  /* Change from a general p selector to a more specific one for prose content */
+  .prose :deep(p) {
+    @apply my-3;
+  }
+
+  /* Remove margins from paragraphs in buttons, links and other components */
+  .prose :deep(a p), .prose :deep(button p), a p, button p {
+    @apply my-0;
+  }
+
+  hr {
+    @apply my-8 border-zinc-700;
+  }
+
+  li {
+    @apply my-3 list-disc ml-4;
+  }
+
+  :not(a) p {
+    @apply my-3;
+  }
+
+  strong {
+    @apply text-primary-50;
+  }
+
+  /* Style blockquotes for product bylines */
+  .prose blockquote {
+    @apply text-base text-primary-500/70 italic mt-0 mb-4 py-0;
+    filter: brightness(1.2);
+  }
+
+  /* Additional selector to ensure blockquotes are targeted */
+  blockquote {
+    @apply text-base text-primary-500/70 italic mt-0 mb-4 py-0;
+    filter: brightness(1.2);
+  }
+
+  /* Table styling */
+  table {
+    @apply w-full my-6 overflow-hidden rounded-lg border border-zinc-700;
+  }
+
+  /* Make tables responsive with horizontal scrolling on mobile */
+  .table-container {
+    @apply w-full overflow-x-auto;
+  }
+
+  table th {
+    @apply py-2 px-4 text-left bg-zinc-800 text-zinc-100 font-semibold;
+  }
+
+  table td {
+    @apply py-2 px-4 border-t border-zinc-700 text-zinc-300;
+  }
+
+  table tr:hover td {
+    @apply bg-zinc-800/50;
+  }
+
+  /* Additional specific styling for tables in prose content */
+  .prose :deep(table) {
+    @apply w-full my-6 overflow-hidden rounded-lg border border-zinc-700;
+  }
+
+  /* Make prose tables responsive too */
+  .prose :deep(.table-container) {
+    @apply w-full overflow-x-auto;
+  }
+
+  .prose :deep(th) {
+    @apply py-2 px-4 text-left bg-zinc-800 text-zinc-100 font-semibold;
+  }
+
+  .prose :deep(td) {
+    @apply py-2 px-4 border-t border-zinc-700 text-zinc-300;
+  }
+
+  .prose :deep(tr:hover td) {
+    @apply bg-zinc-800/50;
+  }
+
+  /* Mermaid diagram styling - managed via mermaid.client.ts theme */
+  .flowchart {
+    @apply bg-transparent rounded-lg my-6;
+  }
+}

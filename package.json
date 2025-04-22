@@ -1,0 +1,61 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x",
+    "pnpm": "10.x"
+  },
+  "scripts": {
+    "build": "pnpm exec playwright install chromium && nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "start": "node .output/server/index.mjs",
+    "postinstall": "nuxt prepare && pnpm run build",
+    "clean": "rm -rf .nuxt .output dist node_modules/.vite",
+    "fresh": "pnpm clean && pnpm dev"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.3.0",
+    "@nuxt/image": "^1.9.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/mdc": "^0.15.0",
+    "@nuxtjs/robots": "^5.2.8",
+    "@nuxtjs/sitemap": "^7.2.9",
+    "@nuxtjs/tailwindcss": "^6.13.2",
+    "better-sqlite3": "^11.9.0",
+    "install": "^0.13.0",
+    "mermaid": "^11.5.0",
+    "nuxt": "^3.16.0",
+    "nuxt-gtag": "^3.0.2",
+    "playwright": "^1.51.1",
+    "remark-extended-table": "^2.0.2",
+    "remark-mermaidjs": "^7.0.0",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.17",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "@parcel/watcher-android-arm64",
+      "@parcel/watcher-darwin-arm64",
+      "@parcel/watcher-darwin-x64",
+      "@parcel/watcher-linux-arm64",
+      "@parcel/watcher-linux-x64",
+      "@parcel/watcher-windows-x64",
+      "better-sqlite3",
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "sharp"
+    ]
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.7.0",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,37 @@
+---
+description: 
+globs: *.md
+alwaysApply: false
+---
+
+# Content writing guidelines
+
+- Use Zinsser principles (clear, concise, simple)
+- NEVER sacrifice technical precision for medical terms
+- Include industry keywords (DICOM, HL7, PACS) for SEO 
+- Balance technical accuracy with accessible language
+- Keep slightly informal but professional tone
+- Use medical examples relevant to the target audience
+- NEVER include placeholder or lorem ipsum text
+- ALWAYS check medical terminology accuracy
+
+## Markdown Component Structure Rules
+
+- When working with custom components in markdown files:
+- Always maintain proper nesting hierarchy with correct indentation
+- Include a blank line before ALL component closure tags (::)
+- For components like FullWidthSection that contain other elements:
+    - First div should be positioned absolute for the hex pattern background
+    - Second div must be positioned relative with z-index: 1
+    - All content goes INSIDE the z-index: 1 div
+- Button groups must follow this exact structure:
+
+    ```md
+    ::ProseButtonGroup
+        ::ProseButton{to="/path" variant="primary"}
+        Button Text
+        ::
+    ::
+    ```
+
+- NEVER close a component with double colons (::), each component gets exactly one opening and one closing tag

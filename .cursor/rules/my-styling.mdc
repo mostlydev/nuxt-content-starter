@@ -1,0 +1,27 @@
+---
+description:
+globs: *.css,*.vue
+alwaysApply: false
+---
+
+# Styling guidelines
+
+- NEVER use generic gray colors
+- Use primary brand color for brand elements
+- ONLY extend Tailwind in `/tailwind.config.ts` or `/assets/css/tailwind.css`
+- Use Tailwind Typography for prose content
+- Support dark/light mode via `@nuxtjs/color-mode`
+
+## Media handling
+- ALWAYS store images in `/public/images/` with organized subdirectories:
+  - Blog posts: `/public/images/posts/<post-slug>/image.jpg`
+  - Products: `/public/images/products/product-name.jpg`
+- ALWAYS reference with absolute paths: `![Alt text](mdc:images/posts/post-slug/image.jpg)`
+- NEVER use relative paths for images
+- Images are optimized via Nuxt Image
+
+## Component styling
+- Use scoped styles in Vue components
+- Prefer Tailwind utility classes over custom CSS
+- Follow existing component patterns
+- NEVER add global styles outside designated files

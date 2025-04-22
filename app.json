@@ -1,0 +1,45 @@
+{
+  "name": "nuxt-content-starter",
+  "description": "Nuxt.js application with Mermaid diagram support",
+  "repository": "https://github.com/mostlydev/nuxt-content-starter",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment for Node.js application",
+      "value": "production"
+    }
+  },
+  "healthchecks": {
+    "web": [
+      {
+        "type": "startup",
+        "name": "web",
+        "description": "Checking if web server has started",
+        "path": "/",
+        "attempts": 3
+      }
+    ]
+  },
+  "addons": [],
+  "packages": [
+    "libatk1.0-0",
+    "libatk-bridge2.0-0",
+    "libxcomposite1",
+    "libxdamage1",
+    "libxfixes3",
+    "libxrandr2",
+    "libgbm1",
+    "libxkbcommon0",
+    "libasound2",
+    "libatspi2.0-0"
+  ],
+  "scripts": {
+    "dokku": {
+      "predeploy": "npm run build"
+    }
+  }
+}

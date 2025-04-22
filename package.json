@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-content-starter",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "engines": {

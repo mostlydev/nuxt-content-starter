@@ -120,26 +120,3 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## GitHub Pages Deployment
-
-This project includes a GitHub Actions workflow for automatically deploying to GitHub Pages.
-
-### Setup
-
-1. Go to your GitHub repository settings
-2. Navigate to the "Pages" section
-3. Under "Source", select "GitHub Actions"
-
-### Workflow Details
-
-The deployment workflow:
-- Runs automatically when changes are pushed to the `master` branch
-- Builds the site using `pnpm run generate` to create a static version
-- Deploys the built site to GitHub Pages
-
-You can also manually trigger a deployment from the Actions tab in your GitHub repository.
-
-### Configuration
-
-The workflow configuration is located in `.github/workflows/deploy.yml`.
